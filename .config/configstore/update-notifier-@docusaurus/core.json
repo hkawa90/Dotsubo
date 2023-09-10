@@ -1,0 +1,10 @@
+{
+	"optOut": false,
+	"lastUpdateCheck": 1694354616866,
+	"update": {
+		"latest": "2.4.1",
+		"current": "2.0.0-beta.6",
+		"type": "preminor",
+		"name": "@docusaurus/core"
+	}
+}
