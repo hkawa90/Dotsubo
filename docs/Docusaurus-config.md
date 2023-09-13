@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # Docusaurus configuration
 
 ## 日本語化
@@ -14,7 +17,15 @@ module.exports = {
 
 ## Mermaidの導入
 
-[Mermaid](https://docusaurus.io/docs/markdown-features/diagrams#installation)
+[Mermaid](https://docusaurus.io/docs/markdown-features/diagrams#installation)を参照。
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 残念ながら、mindmapはちゃんと動きません。そのうち直ることを期待。
 * [Can't render \`mindmap\` mermaid diagrams · Issue #9032 · facebook/docusaurus](https://github.com/facebook/docusaurus/issues/9032)
