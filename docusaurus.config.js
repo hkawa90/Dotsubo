@@ -13,7 +13,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   favicon: 'img/favicon.ico',
   organizationName: 'hkawa90', // Usually your GitHub org/user name.
   projectName: 'Dotsubo', // Usually your repo name.
-
+  i18n: {
+    defaultLocale: 'ja',
+    locales: ['ja'],
+  },
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -21,14 +24,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
