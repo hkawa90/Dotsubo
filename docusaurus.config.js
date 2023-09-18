@@ -46,7 +46,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           src: 'img/Dotsubo-logos_transparent.png',
         },
         items: [
-          {to: '/', label: 'Docs', position: 'left'},
+          {
+            type: 'docSidebar',
+            sidebarId: 'docSidebar',
+            position: 'left',
+            label: 'Docs',
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/hkawa90/Dotsubo',
