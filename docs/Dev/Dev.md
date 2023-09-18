@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # 開発環境
 
 ## Dev container
@@ -69,21 +72,25 @@ TODO extension:                 "ms-vscode.cpptools",
                 "vadimcn.vscode-lldb"
 TODO Task.json, launch.json
 
-## QEMU
+[x86\_64のUbuntuでC/C++のソースコードをARM/ARM64用にクロスコンパイルしてQEMUで実行する方法のまとめ - Qiita](https://qiita.com/tetsu_koba/items/9bdcb59f912efbff3128)
 
-### Docker上にQemuをインストール
+cross compiler
+apt install g++-arm-linux-gnueabihf
+sudo apt install qemu-user-binfmt
 
-### 別アーキテクチャの(host:x86, container:arm)のコンテナを使う
+[エミュレータのセットアップ(QEMU) [MA-X/MA-S/MA-E/IP-K Developers' WiKi]](https://ma-tech.centurysys.jp/doku.php?id=mas1xx_devel:setup_qemu:start)
 
-``` shell
-docker pull meedamian/simple-qemu
-```
+sudo apt install qemu-user-static
 
-[meeDamian/simple-qemu: Emulating other CPU architectures in Docker made easy](https://github.com/meeDamian/simple-qemu)
+[DockerでユーザモードQEMUによるARMエミュレーション環境を構築する - ももいろテクノロジー](https://inaz2.hatenablog.com/entry/2015/03/03/235759)
 
-RUN git clone  -b "$VERSION"  --depth=1  https://git.qemu.org/git/qemu.git
+[クロスDockerの実行にqemuをコピーする必要がなくなった](https://zenn.dev/tetsu_koba/articles/b9545eb0231d7e)
 
-latest version[^latest]
+
+
+update-binfmts --enable qemu-arm
+
+
 
 [^latest]: 8.1
 
