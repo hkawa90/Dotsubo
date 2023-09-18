@@ -253,6 +253,14 @@ navbar:
     }),
 ```
 
+## Custom CSS
+
+```css title="footerを1行にしたので余白を調整(src/css/custom.css)"
+.footer {
+  padding: 0.2rem;
+}
+```
+
 memo:
 
 - [DocSearch: Search made for documentation | DocSearch by Algolia](https://docsearch.algolia.com/)
