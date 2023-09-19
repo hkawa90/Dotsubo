@@ -72,5 +72,5 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     markdown: {
       mermaid: true,
     },
-    themes: ['@docusaurus/theme-mermaid'],
+    themes: ['@docusaurus/theme-mermaid']
 });
