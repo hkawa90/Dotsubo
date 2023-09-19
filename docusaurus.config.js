@@ -48,7 +48,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'docSidebar',
+            sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Docs',
           },
