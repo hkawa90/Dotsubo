@@ -6,8 +6,6 @@ tags: [Docker, Dev]
 
 # C/CPP開発環境
 
-TODO: sudoの動作確認
-
 ```
 FROM ubuntu:20.04 AS base
 
@@ -20,7 +18,6 @@ RUN test -n "$userid"
 RUN apt-get update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 RUN apt-get -y install \
-    sudo \
     build-essential \
     lldb \
     curl \
@@ -57,11 +54,29 @@ ENV PATH="${PATH}:/usr/lib/llvm-10/bin/"
 ENV PATH="${PATH}:/usr/lib/llvm-10/share/clang"
 RUN sed -i 's/subprocess.call(invocation)/subprocess.call(invocation, cwd=args.build_path)/g' /usr/lib/llvm-10/share/clang/run-clang-tidy.py
 
-RUN echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers
-
 WORKDIR /code
 
 # add same user
 RUN groupadd -r $user && useradd -r -m -u $userid -g $user $user
 USER $user
 ```
+
+```shell title="build"
+export user="hogehoge"
+export userid=1000
+sudo docker build -t meson --build-arg user=$user --build-arg userid=$user .
+```
+
+```shell title="ユーザ権限で実行"
+sudo docker run -v $(pwd):/code -it meson
+```
+
+```shell title="rootで作業したい場合は"
+sudo docker run -u 0 -it コンテナID bash
+# or
+sudo docker exec -u 0 -it コンテナID bash
+```
+
+detach(切り離し)[^1]したい場合はCtrl-P, Ctrl-Qで。
+
+[^1]:コンテナを終了しないでバックグラウンドで動作させること。
