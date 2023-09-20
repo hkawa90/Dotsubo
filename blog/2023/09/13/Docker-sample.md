@@ -61,7 +61,7 @@ RUN groupadd -r $user && useradd -r -m -u $userid -g $user $user
 USER $user
 ```
 
-```shell title="build"
+```shell title="build(要user/userid)"
 export user="hogehoge"
 export userid=1000
 sudo docker build -t meson --build-arg user=$user --build-arg userid=$user .
