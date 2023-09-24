@@ -128,11 +128,4 @@ RUN apt-get -y install build-essential gdb python git
 
 [Running Raspbian on x86 docker](http://blog.guiraudet.com/raspberrypi/2016/03/03/raspbian-image-for-docker.html)
 
-### Draw.io
-
-```shell
-docker run -it --rm --name="draw" -p 8080:8080 -p 8443:8443 jgraph/drawio
-# Open with offline mode
-Open http://localhost:8080/?offline=1&https=0 
-```
 

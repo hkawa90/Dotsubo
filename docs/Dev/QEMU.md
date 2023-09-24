@@ -66,15 +66,12 @@ apt install g++-arm-linux-gnueabihf
 ## Build
 
 ```shell
+sudo apt install libglib2.0-dev
 git clone  -b stable-8.1  --depth=1  https://git.qemu.org/git/qemu.git
 cd qemu
 ./configure --target-list=arm-linux-user \
-        --disable-iconv --disable-vnc --disable-pie --disable-kvm \
-        --audio-drv-list= \
-        --enable-attr \
-        --enable-linux-user \
-        --enable-tcg \
-        --static
+        --disable-iconv --disable-vnc --disable-pie --disable-kvm --audio-drv-list= \
+        --enable-attr --enable-linux-user --enable-tcg --static
 make
 make install
 ```

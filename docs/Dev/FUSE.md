@@ -15,16 +15,75 @@ File systems  --->
   <*/M> FUSE (Filesystem in Userspace) support [CONFIG_FUSE_FS]
 ```
 
+## v2 vs v3
+
+FUSEにはv2,v3系がある[^v2-v3]。その違いは[release notes for libfuse 3.0.0](https://github.com/libfuse/libfuse/releases/tag/fuse-3.0.0)によればおおよそ下記の通り。
+
+- The fuse_lowlevel_new function has been renamed to fuse_session_new and no longer interprets the --version or --help options
+- fuse_loop(), fuse_loop_mt(), fuse_session_loop() and fuse_session_loop_mt() now return more detailed error codes instead of just -1. See the documentation of fuse_session_loop() for details
+- There are new fuse_session_unmount and fuse_session_mount functions that should be used in the low-level API. The fuse_mount and fuse_unmount functions should be used with the high-level API only
+- The fuse_invalidate function has been removed
+
+[^v2-v3]:libfuse3 と一緒に libfuse2 をインストールすることで、libfuse2 を使用しているアプリケーショ ンは、すぐにアップデートする必要なく動作を継続できる。
+
 ## Install
 
 meson, pkg-config, pytestなどが必要。
 
 [Install](https://github.com/libfuse/libfuse#installation)参照
 
-もしくはパッケージとしてインストール(ただしVer2系)。
+もしくはパッケージとしてインストール.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="v2"
+  values={[
+    {label: 'V2', value: 'v2'},
+    {label: 'V3', value: 'v3'},
+  ]}>
+  <TabItem value="v2">
 
 ```shell
-apt install ibfuse-dev
+apt install -y libfuse2
+```
+
+  </TabItem>
+  <TabItem value="v3">
+
+```shell
+apt install -y libfuse3-3
+```
+
+  </TabItem>
+</Tabs>
+
+## build
+
+```shell tiltel="cmakeのビルド; mesonがCMakeの3.17以降のみサポートのため"
+wget https://github.com/Kitware/CMake/releases/download/v3.27.5/cmake-3.27.5.tar.gz
+apt-get install -y libssh-dev
+
+tar xzf cmake-3.27.5.tar.gz; cd cmake-3.27.5
+./configure
+make
+make install
+sudo python3 -m pytest test/
+sudo ninja install
+```
+
+```shell 
+
+
+apt-get install -y udev libudev-dev
+
+wget https://github.com/libfuse/libfuse/releases/download/fuse-3.16.1/fuse-3.16.1.tar.gz
+tar xzf fuse-3.16.1.tar.gz; cd fuse-3.16.1
+mkdir build ; cd build
+meson setup ..
+ninja
+
 ```
 
 ## Configuration
@@ -44,6 +103,13 @@ EOF
 ```
 
 ## 使用方法
+
+### ライブラリ利用方法
+
+```shell title="v3"
+gcc -Wall hello.c `pkg-config fuse3 --cflags --libs` -o hello
+```
+### Mount
 
 FUSE ファイルシステムは、fuse3 で提供されている fusermount3[^1]を使う
 
@@ -468,6 +534,28 @@ executable('appFS_sample2',
 
 ```
 
+## Dockerで使用する場合[^docker-fuse]
+
+```shell title="Dockerで使用する場合"
+docker run -d --rm \
+           --device /dev/fuse \
+           --cap-add SYS_ADMIN \
+      <image_id/name>
+
+# or 
+docker run -d --rm \
+           --device /dev/fuse \
+           --cap-add SYS_ADMIN \
+           --security-opt apparmor:unconfined \
+      <image_id/name>
+```
+
+[^docker-fuse]:[FUSE inside Docker - Stack Overflow](https://stackoverflow.com/questions/48402218/fuse-inside-docker)
+
 ## 参考文献
 
 - [Filesystem in Userspace (FUSE) のカーネルとデーモン間の通信 - Qiita](https://qiita.com/tkusumi/items/6dc204ba964264c72a9a)
+- [FUSE — The Linux Kernel documentation](https://www.kernel.org/doc/html/next/filesystems/fuse.html)
+- https://qiita.com/tags/fuse
+- [入門 FUSE](https://blog.ssrf.in/post/fuse-tutorial/)
+- [FUSEでfilesystemを使ってみる。 - tkokamoの日記](https://tkokamo.hateblo.jp/entry/2019/07/14/031523)
