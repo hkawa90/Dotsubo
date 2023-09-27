@@ -1,0 +1,556 @@
+<svg aria-roledescription="mindmap" role="graphics-document document" viewBox="5 5 980.1000366210938 368.5433044433594" style="max-width: 100%;"
+    xmlns="http://www.w3.org/2000/svg" width="100%" id="graph-div" height="100%"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");'</style>
+    <style>#graph-div{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#graph-div .error-icon{fill:#552222;}#graph-div .error-text{fill:#552222;stroke:#552222;}#graph-div .edge-thickness-normal{stroke-width:2px;}#graph-div .edge-thickness-thick{stroke-width:3.5px;}#graph-div .edge-pattern-solid{stroke-dasharray:0;}#graph-div .edge-pattern-dashed{stroke-dasharray:3;}#graph-div .edge-pattern-dotted{stroke-dasharray:2;}#graph-div .marker{fill:#333333;stroke:#333333;}#graph-div .marker.cross{stroke:#333333;}#graph-div svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#graph-div .edge{stroke-width:3;}#graph-div .section--1 rect,#graph-div .section--1 path,#graph-div .section--1 circle,#graph-div .section--1 polygon,#graph-div .section--1 path{fill:hsl(240, 100%, 76.2745098039%);}#graph-div .section--1 text{fill:#ffffff;}#graph-div .node-icon--1{font-size:40px;color:#ffffff;}#graph-div .section-edge--1{stroke:hsl(240, 100%, 76.2745098039%);}#graph-div .edge-depth--1{stroke-width:17;}#graph-div .section--1 line{stroke:hsl(60, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-0 rect,#graph-div .section-0 path,#graph-div .section-0 circle,#graph-div .section-0 polygon,#graph-div .section-0 path{fill:hsl(60, 100%, 73.5294117647%);}#graph-div .section-0 text{fill:black;}#graph-div .node-icon-0{font-size:40px;color:black;}#graph-div .section-edge-0{stroke:hsl(60, 100%, 73.5294117647%);}#graph-div .edge-depth-0{stroke-width:14;}#graph-div .section-0 line{stroke:hsl(240, 100%, 83.5294117647%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-1 rect,#graph-div .section-1 path,#graph-div .section-1 circle,#graph-div .section-1 polygon,#graph-div .section-1 path{fill:hsl(80, 100%, 76.2745098039%);}#graph-div .section-1 text{fill:black;}#graph-div .node-icon-1{font-size:40px;color:black;}#graph-div .section-edge-1{stroke:hsl(80, 100%, 76.2745098039%);}#graph-div .edge-depth-1{stroke-width:11;}#graph-div .section-1 line{stroke:hsl(260, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-2 rect,#graph-div .section-2 path,#graph-div .section-2 circle,#graph-div .section-2 polygon,#graph-div .section-2 path{fill:hsl(270, 100%, 76.2745098039%);}#graph-div .section-2 text{fill:#ffffff;}#graph-div .node-icon-2{font-size:40px;color:#ffffff;}#graph-div .section-edge-2{stroke:hsl(270, 100%, 76.2745098039%);}#graph-div .edge-depth-2{stroke-width:8;}#graph-div .section-2 line{stroke:hsl(90, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-3 rect,#graph-div .section-3 path,#graph-div .section-3 circle,#graph-div .section-3 polygon,#graph-div .section-3 path{fill:hsl(300, 100%, 76.2745098039%);}#graph-div .section-3 text{fill:black;}#graph-div .node-icon-3{font-size:40px;color:black;}#graph-div .section-edge-3{stroke:hsl(300, 100%, 76.2745098039%);}#graph-div .edge-depth-3{stroke-width:5;}#graph-div .section-3 line{stroke:hsl(120, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-4 rect,#graph-div .section-4 path,#graph-div .section-4 circle,#graph-div .section-4 polygon,#graph-div .section-4 path{fill:hsl(330, 100%, 76.2745098039%);}#graph-div .section-4 text{fill:black;}#graph-div .node-icon-4{font-size:40px;color:black;}#graph-div .section-edge-4{stroke:hsl(330, 100%, 76.2745098039%);}#graph-div .edge-depth-4{stroke-width:2;}#graph-div .section-4 line{stroke:hsl(150, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-5 rect,#graph-div .section-5 path,#graph-div .section-5 circle,#graph-div .section-5 polygon,#graph-div .section-5 path{fill:hsl(0, 100%, 76.2745098039%);}#graph-div .section-5 text{fill:black;}#graph-div .node-icon-5{font-size:40px;color:black;}#graph-div .section-edge-5{stroke:hsl(0, 100%, 76.2745098039%);}#graph-div .edge-depth-5{stroke-width:-1;}#graph-div .section-5 line{stroke:hsl(180, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-6 rect,#graph-div .section-6 path,#graph-div .section-6 circle,#graph-div .section-6 polygon,#graph-div .section-6 path{fill:hsl(30, 100%, 76.2745098039%);}#graph-div .section-6 text{fill:black;}#graph-div .node-icon-6{font-size:40px;color:black;}#graph-div .section-edge-6{stroke:hsl(30, 100%, 76.2745098039%);}#graph-div .edge-depth-6{stroke-width:-4;}#graph-div .section-6 line{stroke:hsl(210, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-7 rect,#graph-div .section-7 path,#graph-div .section-7 circle,#graph-div .section-7 polygon,#graph-div .section-7 path{fill:hsl(90, 100%, 76.2745098039%);}#graph-div .section-7 text{fill:black;}#graph-div .node-icon-7{font-size:40px;color:black;}#graph-div .section-edge-7{stroke:hsl(90, 100%, 76.2745098039%);}#graph-div .edge-depth-7{stroke-width:-7;}#graph-div .section-7 line{stroke:hsl(270, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-8 rect,#graph-div .section-8 path,#graph-div .section-8 circle,#graph-div .section-8 polygon,#graph-div .section-8 path{fill:hsl(150, 100%, 76.2745098039%);}#graph-div .section-8 text{fill:black;}#graph-div .node-icon-8{font-size:40px;color:black;}#graph-div .section-edge-8{stroke:hsl(150, 100%, 76.2745098039%);}#graph-div .edge-depth-8{stroke-width:-10;}#graph-div .section-8 line{stroke:hsl(330, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-9 rect,#graph-div .section-9 path,#graph-div .section-9 circle,#graph-div .section-9 polygon,#graph-div .section-9 path{fill:hsl(180, 100%, 76.2745098039%);}#graph-div .section-9 text{fill:black;}#graph-div .node-icon-9{font-size:40px;color:black;}#graph-div .section-edge-9{stroke:hsl(180, 100%, 76.2745098039%);}#graph-div .edge-depth-9{stroke-width:-13;}#graph-div .section-9 line{stroke:hsl(0, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-10 rect,#graph-div .section-10 path,#graph-div .section-10 circle,#graph-div .section-10 polygon,#graph-div .section-10 path{fill:hsl(210, 100%, 76.2745098039%);}#graph-div .section-10 text{fill:black;}#graph-div .node-icon-10{font-size:40px;color:black;}#graph-div .section-edge-10{stroke:hsl(210, 100%, 76.2745098039%);}#graph-div .edge-depth-10{stroke-width:-16;}#graph-div .section-10 line{stroke:hsl(30, 100%, 86.2745098039%);stroke-width:3;}#graph-div .disabled,#graph-div .disabled circle,#graph-div .disabled text{fill:lightgray;}#graph-div .disabled text{fill:#efefef;}#graph-div .section-root rect,#graph-div .section-root path,#graph-div .section-root circle,#graph-div .section-root polygon{fill:hsl(240, 100%, 46.2745098039%);}#graph-div .section-root text{fill:#ffffff;}#graph-div .icon-container{height:100%;display:flex;justify-content:center;align-items:center;}#graph-div .edge{fill:none;}#graph-div .mindmap-node-label{dy:1em;alignment-baseline:middle;text-anchor:middle;dominant-baseline:middle;text-align:center;}#graph-div :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+    <g></g>
+    <g></g>
+    <g class="mindmap-edges">
+        <path class="edge section-edge-0 edge-depth-1" d="M 352.1776611742207,139.98004433118382 L 289.84164361079615,138.00056203214146 L227.50562604737158,136.0210797330991"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 353.519089094204,146.6730254904546 L 315.1952687895474,164.12632054813818 L276.87144848489083,181.57961560582177"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 360.3332436205283,127.10482505065963 L 339.63373797765917,86.68197117480982 L318.93423233479,46.25911729896002"></path>
+        <path class="edge section-edge-0 edge-depth-2" d="M 242.88161674383545,242.99285742703157 L 175.70119519706986,218.59326162029558 L108.52077365030428,194.1936658135596"></path>
+        <path class="edge section-edge-0 edge-depth-2" d="M 262.1190437918275,262.20589995202164 L 274.7603061396849,296.874508686729 L287.40156848754225,331.54311742143625"></path>
+        <path class="edge section-edge-0 edge-depth-2" d="M 241.99946932348288,248.8673367787834 L 169.35957965520112,252.5224939460815 L96.71968998691935,256.17765111337957"></path>
+        <path class="edge section-edge-0 edge-depth-2" d="M 243.6874681447956,255.06296031231517 L 193.4765501137676,281.31265314420887 L143.2656320827396,307.5623459761025"></path>
+        <path class="edge section-edge-0 edge-depth-2" d="M 270.7915361961025,253.96634476413607 L 323.359764728463,276.2437196899301 L375.9279932608235,298.5210946157241"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 356.44093801781514,150.9387343365517 L 312.07530970865696,194.2848186591212 L267.7096813994988,237.63090298169072"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 353.7526988983398,133.74992080754018 L 307.54814099966245,110.65622861575585 L261.3435831009851,87.56253642397152"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 369.3327505881458,155.2994098050411 L 373.7296207344601,185.47723708688162 L378.12649088077444,215.65506436872212"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 377.53554922681747,129.61373409359464 L 407.59266071934553,98.17358929687984 L437.6497722118736,66.73344450016504"></path>
+        <path class="edge section-edge-0 edge-depth-1" d="M 381.70492110248017,136.74950166876377 L 418.754763624549,127.30115500989197 L455.80460614661786,117.85280835102017"></path>
+        <path class="edge section-edge-0 edge-depth-0" d="M 554.9782822124932,167.5857191113297 L 468.497146055876,155.09319761713803 L382.01600989925873,142.60067612294637"></path>
+        <path class="edge section-edge-1 edge-depth-1" d="M 755.2428734140177,242.09602573217262 L 754.0329613608845,273.1790881936345 L752.8230493077514,304.26215065509643"></path>
+        <path class="edge section-edge-1 edge-depth-1" d="M 769.3329998608708,220.58286227888507 L 818.2093910386637,196.9727343090989 L867.0857822164567,173.36260633931275"></path>
+        <path class="edge section-edge-1 edge-depth-1" d="M 770.3638152531216,230.80344145277715 L 835.1155053476343,247.2661300420748 L899.8671954421468,263.72881863137246"></path>
+        <path class="edge section-edge-1 edge-depth-0" d="M 584.1577138551659,174.1518079999159 L 662.825248263023,198.41882097955133 L741.4927826708802,222.68583395918677"></path>
+        <path class="edge section-edge-2 edge-depth-0" d="M 584.6926365866489,171.71249626429855 L 624.801126620408,177.05967741040476 L664.9096166541672,182.40685855651097"></path>
+        <path class="edge section-edge-3 edge-depth-0" d="M 555.1210941765723,172.69995045461724 L 513.9276945357005,181.02006488948052 L472.73429489482874,189.34017932434386"></path>
+        <path class="edge section-edge-4 edge-depth-0" d="M 580.9020064161914,159.61681191413567 L 617.0733317362011,126.59433359102414 L653.2446570562108,93.57185526791262"></path>
+        <path class="edge section-edge-5 edge-depth-0" d="M 578.6649990070703,181.84802352316802 L 602.392224933256,214.37001587456294 L626.1194508594417,246.89200822595785"></path>
+        <path class="edge section-edge-6 edge-depth-0" d="M 569.3081571295262,154.73914427750435 L 568.0444850413978,118.02843733140278 L566.7808129532694,81.31773038530123"></path>
+        <path class="edge section-edge-7 edge-depth-0" d="M 584.4800418115962,166.53558986913234 L 656.4041683666115,150.8576054662257 L728.3282949216269,135.17962106331905"></path>
+        <path class="edge section-edge-8 edge-depth-0" d="M 561.9789288665493,182.51509654268017 L 539.5252739407805,219.1061356635334 L517.0716190150117,255.69717478438662"></path>
+    </g>
+    <g class="mindmap-nodes">
+        <g transform="translate(517.1366880885778, 143.02245364759585)" class="mindmap-node section--1 section-root" id="n-0">
+            <g transform="translate(52.6875, 26.707811737060545)">
+                <circle r="52.6875" class="node-bkg node-circle" id="node-0"></circle>
+            </g>
+            <g transform="translate(52.6875, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">Docusaurus</tspan>
+                        </tspan>
+                        <tspan dy="1.1em" y="1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">Markdown</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(337.6076040231742, 122.54831734961965)" class="mindmap-node section-0" id="n-1">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h49.125 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-1"></path>
+                <line y2="35.815625" x2="59.125" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(29.5625, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">Basic</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(159.91943319841812, 117.63718171466326)" class="mindmap-node section-0" id="n-2">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h95.1875 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-2"></path>
+                <line y2="35.815625" x2="105.1875" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(52.59375, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">"#</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> Headers"</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(202.74387105592064, 169.8886987466567)" class="mindmap-node section-0" id="n-3">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h110.953125 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-3"></path>
+                <line y2="35.815625" x2="120.953125" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(60.4765625, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">&gt;</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> Blockquotes</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(258.51924693214414, 15)" class="mindmap-node section-0" id="n-4">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h97.15625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-4"></path>
+                <line y2="35.815625" x2="107.15625" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(53.578125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">`inline</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> code`</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(208.23051539413973, 230.20569496862277)" class="mindmap-node section-0" id="n-5">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h87.5 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-5"></path>
+                <line y2="35.815625" x2="97.5" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(48.75, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">code</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> block</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(15, 171.16520327196838)" class="mindmap-node section-0" id="n-6">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h148.84375 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-6"></path>
+                <line y2="35.815625" x2="158.84375" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(79.421875, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">//</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> highlight-next-line</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(227.57134688523, 327.7276974048351)" class="mindmap-node section-0" id="n-7">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h119.9375 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-7"></path>
+                <line y2="35.815625" x2="129.9375" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(64.96875, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">//</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> highlight-start</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(19.254268916262504, 239.02366792354016)" class="mindmap-node section-0" id="n-8">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h114.96875 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-8"></path>
+                <line y2="35.815625" x2="124.96875" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(62.484375, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">//</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> highlight-end</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(53.714772333395445, 296.6039863197949)" class="mindmap-node section-0" id="n-9">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h142.515625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-9"></path>
+                <line y2="35.815625" x2="152.515625" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(76.2578125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">showLineNumbers</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(356.9343265627863, 286.4661194112374)" class="mindmap-node section-0" id="n-10">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h55.609375 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-10"></path>
+                <line y2="35.815625" x2="65.609375" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(32.8046875, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">title=""</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(213.9183654761507, 62.948514881892045)" class="mindmap-node section-0" id="n-11">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h58.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-11"></path>
+                <line y2="35.815625" x2="68.015625" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(34.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">水平線</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(338.28132494574606, 212.59053182414357)" class="mindmap-node section-0" id="n-12">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h74.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-12"></path>
+                <line y2="35.815625" x2="84.015625" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(42.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">箇条書き</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(382.0074049155169, 37.983236244140016)" class="mindmap-node section-0" id="n-13">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h122.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-13"></path>
+                <line y2="35.815625" x2="132.015625" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(66.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">番号付きリスト</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(436.33161072592384, 96.23836767016428)" class="mindmap-node section-0" id="n-14">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h58.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-14"></path>
+                <line y2="35.815625" x2="68.015625" y1="35.815625" x1="0" class="node-line-0"></line>
+            </g>
+            <g transform="translate(34.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">リンク</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(713.8184959374682, 209.19956407444624)" class="mindmap-node section-1" id="n-15">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h74.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-15"></path>
+                <line y2="35.815625" x2="84.015625" y1="35.815625" x1="0" class="node-line-1"></line>
+            </g>
+            <g transform="translate(42.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">文字装飾</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(696.3255517843008, 301.34298731282286)" class="mindmap-node section-1" id="n-16">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h101.828125 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-16"></path>
+                <line y2="35.815625" x2="111.828125" y1="35.815625" x1="0" class="node-line-1"></line>
+            </g>
+            <g transform="translate(55.9140625, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">*イタリック*</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(842.1315361398592, 148.93027954375157)" class="mindmap-node section-1" id="n-17">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h66.921875 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-17"></path>
+                <line y2="35.815625" x2="76.921875" y1="35.815625" x1="0" class="node-line-1"></line>
+            </g>
+            <g transform="translate(38.4609375, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">**太字**</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(853.7093897578002, 249.51707100970336)" class="mindmap-node section-1" id="n-18">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h111.390625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-18"></path>
+                <line y2="35.815625" x2="121.390625" y1="35.815625" x1="0" class="node-line-1"></line>
+            </g>
+            <g transform="translate(60.6953125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">~~打ち消し~~</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(653.7702526522382, 166.4812769361531)" class="mindmap-node section-2" id="n-19">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h42.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-19"></path>
+                <line y2="35.815625" x2="52.015625" y1="35.815625" x1="0" class="node-line-2"></line>
+            </g>
+            <g transform="translate(26.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">画像</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(440.0233884828233, 174.4020518943047)" class="mindmap-node section-3" id="n-20">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h26.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-20"></path>
+                <line y2="35.815625" x2="36.015625" y1="35.815625" x1="0" class="node-line-3"></line>
+            </g>
+            <g transform="translate(18.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">表</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(614.3146628838244, 65.55058929739187)" class="mindmap-node section-4" id="n-21">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h90.015625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-21"></path>
+                <line y2="35.815625" x2="100.015625" y1="35.815625" x1="0" class="node-line-4"></line>
+            </g>
+            <g transform="translate(50.0078125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">折りたたみ</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(580.9368242779342, 241.10195386446944)" class="mindmap-node section-5" id="n-22">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h98.046875 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-22"></path>
+                <line y2="35.815625" x2="108.046875" y1="35.815625" x1="0" class="node-line-5"></line>
+            </g>
+            <g transform="translate(54.0234375, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">Admonitions</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(539.3663444942179, 48.418796778149165)" class="mindmap-node section-6" id="n-23">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h43.796875 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-23"></path>
+                <line y2="35.815625" x2="53.796875" y1="35.815625" x1="0" class="node-line-6"></line>
+            </g>
+            <g transform="translate(26.8984375, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">Tabs</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(695.0388361446453, 114.07713304779497)" class="mindmap-node section-7" id="n-24">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h85.890625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-24"></path>
+                <line y2="35.815625" x2="95.890625" y1="35.815625" x1="0" class="node-line-7"></line>
+            </g>
+            <g transform="translate(47.9453125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">Inline</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> TOC</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <g transform="translate(457.9880785429832, 250.5741934424104)" class="mindmap-node section-8" id="n-25">
+            <g>
+                <path d="M0 30.815624999999997 v-25.815624999999997 q0,-5 5,-5 h92.4765625 q5,0 5,5 v30.815624999999997 H0 Z" class="node-bkg node-no-border" id="node-25"></path>
+                <line y2="35.815625" x2="102.4765625" y1="35.815625" x1="0" class="node-line-8"></line>
+            </g>
+            <g transform="translate(51.23828125, 5)" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" dy="1em">
+                <g>
+                    <rect class="background"></rect>
+                    <text y="-10.1" id="frontmatter">
+                        <tspan dy="1.1em" y="-0.1em" x="0" class="text-outer-tspan">
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal">front</tspan>
+                            <tspan font-weight="normal" class="text-inner-tspan" font-style="normal"> matter</tspan>
+                        </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <script>
+<![CDATA[
+const nodeText = [];
+nodeText[0]=""
+nodeText[1]=""
+nodeText[2]="# headers"
+nodeText[3]="> Blockquotes"
+nodeText[4]="`inline code`"
+nodeText[5]=`
+\`\`\`
+code Block
+\`\`\`
+`
+nodeText[6]="// highlight-next-line"
+nodeText[7]="// highlight-start"
+nodeText[8]="// highlight-end"
+nodeText[9]="showLineNumbers"
+nodeText[10]='title=""'
+nodeText[11]="---"
+nodeText[12]="- 箇条書き"
+nodeText[13]="1. リスト"
+nodeText[14]="[リンクテキスト](URL)"
+nodeText[15]=""
+nodeText[16]="*イタリック*"
+nodeText[17]="**太字**"
+nodeText[18]="~~打ち消し~~"
+nodeText[19]='![代替テキスト](URL "画像タイトル")'
+nodeText[20]=`
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|`
+nodeText[21]="<details><summary>サンプルコード</summary>"
+nodeText[22]=`:::note/tip/info/caution/danger
+hoge
+:::`
+nodeText[23]=`
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>`
+nodeText[24]=`
+import TOCInline from '@theme/TOCInline';
+<TOCInline toc={toc} />
+`
+nodeText[25]=`
+id: doc-markdown
+title: Docs Markdown Features
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: Markdown
+sidebar_position: 3
+pagination_label: Markdown features
+custom_edit_url: https://github.com/facebook/docusaurus/edit/main/docs/api-doc-markdown.md
+description: How do I find you when I cannot solve this problem
+keywords:
+  - docs
+  - docusaurus
+image: https://i.imgur.com/mErPwqL.png
+slug: /myDoc
+last_update:
+  date: 1/1/2000
+  author: custom author name
+`
+
+function toClipBoard() {
+    const text = this;
+    navigator.clipboard.writeText(text).then(
+    () => {
+        // コピーに成功したときの処理
+        console.log('Copy success!' + ',' + text)
+    },
+    () => {
+        // コピーに失敗したときの処理
+        console.log('Copy fail!')
+    });        
+}
+
+for (var cnt=1; cnt <= 25; cnt++ ) {
+    const node=document.getElementById("n-"+cnt);
+    node.addEventListener("click", toClipBoard.bind(nodeText[cnt]));
+}
+]]>
+</script>
+</svg>

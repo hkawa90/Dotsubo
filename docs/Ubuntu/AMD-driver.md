@@ -1,3 +1,7 @@
+---
+title: AMD Driver
+---
+
 # [Linux® Drivers for AMD Radeon™ and Radeon PRO™ Graphics | AMD](https://www.amd.com/en/support/linux-drivers)
 
 ## Download
