@@ -84,3 +84,13 @@ for (var cnt=1; cnt <= 25; cnt++ ) {
     node.addEventListener("click", toClipBoard.bind(nodeText[cnt]));
 }
 ```
+## Memo
+- [JSDOMを利用し、HTML + JavaScriptのプログラムをNode.jsで動作させる - Symfoware](https://symfoware.blog.fc2.com/blog-entry-2685.html)
+- [TypeScript+NodeJSで手軽にDOMの中身を取り出す](https://zenn.dev/cat12079801/articles/6c09dd82df3c40)
+- [マーメイド#23 Mermaid CLIを使ってみる - Qiita](https://qiita.com/hirokiwa/items/ed0ab188c72a1a2a14d4)
+- [Document.createCDATASection() - Web API | MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/createCDATASection)
+
+```js
+valueNode[0].text = "<![CDATA["+ tmpVal +"]]>";
+//valueNode[0] represents "<value></value>"
+```

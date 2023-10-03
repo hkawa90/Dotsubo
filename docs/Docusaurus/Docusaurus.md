@@ -261,6 +261,15 @@ navbar:
 }
 ```
 
+```css title="明朝体ベース"
+:root {
+  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+```
+
+## 参考
+
+- [【2023年版】font-familyの正しい指定方法・タイプ別おすすめフォント設定例](https://willcloud.jp/knowhow/font-family/#i-8)
+
 memo:
 
 - [DocSearch: Search made for documentation | DocSearch by Algolia](https://docsearch.algolia.com/)

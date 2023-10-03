@@ -9,7 +9,7 @@ sidebar_position: 3
 
 ### strace
 
-プログラムを起動ないし、attachしてシステムコール内容を出力するコマンドです。
+プログラムを起動ないし、attachしてシステムコール内容を出力するトレースコマンドです。
 
 ```shell
 > strace ls
@@ -22,6 +22,8 @@ openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
 ```
 
 ### ltrace
+
+共有ライブラリの関数呼び出しをトレースするコマンドです。
 
 ## [Gcc/Clang Program Instrumentation Options](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html#index-finstrument-functions)
 
@@ -194,3 +196,13 @@ https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.egr
 [Visual Studio CodeでRust開発環境を整える - Qiita](https://qiita.com/84zume/items/377033ab6b6aee2a68d7)
 
 [Linux上でのSharedLibraryへのHookをして既存のバイナリの挙動に割り込む - Qiita](https://qiita.com/recuraki/items/9b02508d4e547e2c0e52)
+
+[Linux Kernel Module Rootkit — Syscall Table Hijacking | by GoldenOak | InfoSec Write-ups](https://infosecwriteups.com/linux-kernel-module-rootkit-syscall-table-hijacking-8f1bc0bd099c)
+
+[Hooking Linux Kernel Functions, Part 1: Looking for the Perfect Solution | Apriorit](https://www.apriorit.com/dev-blog/544-hooking-linux-functions-1)
+
+[Hooking Linux Kernel Functions, Part 2: How to Hook Functions with Ftrace | Apriorit](https://www.apriorit.com/dev-blog/546-hooking-linux-functions-2)
+
+[seccomp – Alfonso Sánchez-Beato's blog](https://www.alfonsobeato.net/tag/seccomp/)
+
+[c - Linux Kernel: System call hooking example - Stack Overflow](https://stackoverflow.com/questions/2103315/linux-kernel-system-call-hooking-example)
