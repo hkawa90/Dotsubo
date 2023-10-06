@@ -61,7 +61,9 @@ Dockerを使うなら`host`オプションを追加。
 ```
 ext install astro-build.astro-vscode
 ```
-
+## 設定
+- [設定方法 🚀 Astroドキュメント](https://docs.astro.build/ja/reference/configuration-reference/#%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%81%AE%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3)
+- [[2023年6月版]Astro.js 小ネタ集 その2 Markdownの表示カスタマイズいろいろ](https://zenn.dev/asopitech/articles/20230604-012854_1)
 ## Deploy
 
 [Deploy your Astro Site 🚀 Astro Documentation](https://docs.astro.build/en/guides/deploy/)

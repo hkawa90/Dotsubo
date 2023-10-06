@@ -56,3 +56,7 @@ done
 
 echo "Done"
 ```
+
+## 参考
+
+[linux - Pipe to/from the clipboard in a Bash script - Stack Overflow](https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-a-bash-script)

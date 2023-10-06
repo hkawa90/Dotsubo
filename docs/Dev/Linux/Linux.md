@@ -28,3 +28,11 @@
 - [共有ライブラリの仕組み - Qiita](https://qiita.com/saikoro-steak/items/f9bf534f8fc5f2be3b0e)
 - [PLTとGOTってなんだっけ · Keichi Takahashi](https://keichi.dev/post/plt-and-got/)
 - [Linuxの共有ライブラリ呼び出し(呼び出し側編) - 情弱ログ](https://sugawarayusuke.hatenablog.com/entry/2018/03/06/020921)
+
+## proc
+
+[decode entries in /proc/net/tcp](https://gist.github.com/jkstill/5095725)
+
+## Kernel Source
+
+- [Linux source code - Bootlin](https://elixir.bootlin.com/linux/latest/source)
