@@ -20,6 +20,10 @@
 
 - [javascript - How to add a link in a mermaid node description? - Stack Overflow](https://stackoverflow.com/questions/41960529/how-to-add-a-link-in-a-mermaid-node-description)
 - [javascript - How to embed an image in a node with "mermaid.js" - Stack Overflow](https://stackoverflow.com/questions/42402912/how-to-embed-an-image-in-a-node-with-mermaid-js)
+
+### SVG
+
+- [bbgvisualjournalist/table-to-svg: Converts an HTML table to JSON that is rendered as a responsive SVG.](https://github.com/bbgvisualjournalist/table-to-svg)
 ## Python
 
 ```python

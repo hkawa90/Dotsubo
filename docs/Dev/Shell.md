@@ -1,5 +1,12 @@
 # Shellあれこれ
 
+ほぼbashについての記述です。
+
+## Bash
+
+- [Bash - GNU Project - Free Software Foundation](https://www.gnu.org/software/bash/)
+    - [Man page of BASH](https://linuxjm.osdn.jp/html/GNU_bash/man1/bash.1.html)
+    - [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 ## SHELL自身のプロセスID
 
 - $$ : 動作しているSHELLプロセス
@@ -57,6 +64,10 @@ done
 echo "Done"
 ```
 
+## library
+
+-[mrbaseman/parse\_yaml: a simple yaml parser implemented in bash](https://github.com/mrbaseman/parse_yaml/tree/master)
+    - Pure bash YAML parser
 ## 参考
 
 [linux - Pipe to/from the clipboard in a Bash script - Stack Overflow](https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-a-bash-script)

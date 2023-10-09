@@ -93,9 +93,10 @@ project[^project]は各プロジェクトで最初に呼び出される関数で
 
 ## 実行例
 
-```shell
+```shell title="セットアップからビルドまで"
 meson setup builddir
-meson compile -C builddir
+cd builddir
+meson compile
 ```
 
 ```shell title="コンパイラの設定変更"
@@ -131,3 +132,30 @@ ninja scan-build
 cd builddir
 ninja clang-tidy
 ```
+
+## meson.build sample
+
+```meson title="doxygen"
+# Usage:
+# > cd build_directories
+# > ninja docs
+doxygen = find_program('doxygen', required : false)
+if doxygen.found()
+  message('Doxygen found')
+  run_target('docs', command : [doxygen, meson.source_root() + '/Doxyfile'])    
+else
+  warning('Documentation disabled without doxygen')
+endif
+```
+- [configuration - Cannot run Doxygen from Meson on a C++ project - Stack Overflow](https://stackoverflow.com/questions/52520146/cannot-run-doxygen-from-meson-on-a-c-project/52534082#52534082)
+- [doc/api/meson.build · a52f0db3c54b093a2c44dce37ea6dd5582a19c5a · libinput / libinput · GitLab](https://gitlab.freedesktop.org/libinput/libinput/blob/a52f0db3c54b093a2c44dce37ea6dd5582a19c5a/doc/api/meson.build)
+- [run_target](https://mesonbuild.com/Reference-manual_functions.html#run_target)
+
+```meson title="Run external command"
+source = join_paths(meson.source_root(), 'test.txt')
+dest = join_paths(meson.build_root(), 'test2.txt')
+message('copying @0@ to @1@ ...'.format(source, dest))
+r = run_command('cp', source, dest)
+```
+- [How to run a shell command from a Meson script? - Stack Overflow](https://stackoverflow.com/questions/52608835/how-to-run-a-shell-command-from-a-meson-script)
+- [run_command](https://mesonbuild.com/Reference-manual_functions.html#run_command)
