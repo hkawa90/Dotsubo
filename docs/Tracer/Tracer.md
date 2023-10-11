@@ -24,7 +24,10 @@ openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
 
 ### ltrace
 
-共有ライブラリの関数呼び出しをトレースするコマンドです。
+共有ライブラリの関数呼び出しをトレースするコマンドです。ltrace は PLT に仕掛けを行うことで、関数呼び出しのトレースを実現している。最近の実行ファイルはPLT[^1]を使っていないので何も表示されない。表示するためには`-z lazy`オプション[^2]でリンクする必要がある。
+
+[^1]:動的リンカーが再配置処理をPLTとGOTを用いる。
+[^2]:Mark object lazy runtime binding
 
 [dkogan/ltrace](https://github.com/dkogan/ltrace)
 
@@ -204,36 +207,48 @@ void __cyg_profile_func_exit(void *addr, void *callsite)
 
 https://tech.tier4.jp/entry/2021/03/10/160000
 
+## Seccomp
+
+- [Seccomp BPF (SECure COMPuting with filters) — The Linux Kernel documentation](https://www.kernel.org/doc/html/v4.19/userspace-api/seccomp_filter.html?highlight=seccomp)
+- [seccomp/libseccomp: The main libseccomp repository](https://github.com/seccomp/libseccomp)
+- [Introduction to Seccomp - Speaker Deck](https://speakerdeck.com/mrtc0/introduction-to-seccomp)
+
+>        SCMP_ACT_TRACE(uint16_t msg_num)
+> If the thread is being traced and the tracing process specified the PTRACE_O_TRACESECCOMP option in the call to ptrace(2), the tracing process will be notified, via PTRACE_EVENT_SECCOMP, and the value provided in msg_num can be retrieved using the PTRACE_GETEVENTMSG option.
+>
+> [seccomp\_init(3) - Linux manual page](https://man7.org/linux/man-pages/man3/seccomp_init.3.html)
+
 ## Live patching user space process
 
-[SLES 15 SP4 | Administration Guide | User space live patching](https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-ulp.html)
+- [SLES 15 SP4 | Administration Guide | User space live patching](https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-ulp.html)
+- [SUSE/libpulp: libpulp enables live patching in user space applications.](https://github.com/SUSE/libpulp)
+- [2021-08-05-libpulp.pdf](https://www.pdxlinux.org/2021-08-05-libpulp.pdf)
+- [livepatch - Live Patching for Linux](http://ukai.jp/Software/livepatch/)
 
+## Misc
 
-https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.egr.unlv.edu/~ed/assembly64.pdf&ved=2ahUKEwjW5ICCl7CBAxXTlFYBHYcJDeg4ChAWegQIEBAB&usg=AOvVaw1MbTXudiVAokpNA6cM-7iu
+- [Redirecting functions in shared ELF libraries - CodeProject](https://www.codeproject.com/Articles/70302/Redirecting-functions-in-shared-ELF-libraries)
+    - [shoumikhin/ELF-Hook at 8aba5856357475130bd50ef550ee8baf2025db8c](https://github.com/shoumikhin/ELF-Hook/tree/8aba5856357475130bd50ef550ee8baf2025db8c)
+- [kubo/plthook: Hook function calls by replacing PLT(Procedure Linkage Table) entries.](https://github.com/kubo/plthook)
+- [kubo/funchook: Hook function calls by inserting jump instructions at runtime](https://github.com/kubo/funchook)
+- [GNU poke](http://www.jemarch.net/poke.html)
+- [kubo/injector: Library for injecting a shared library into a Linux or Windows process](https://github.com/kubo/injector)
+- [lief-project/LIEF: LIEF - Library to Instrument Executable Formats](https://github.com/lief-project/LIEF)
 
-[assembly64.pdf](http://www.egr.unlv.edu/~ed/assembly64.pdf)
+## Reference
 
-[ida - Patching branch on assembly code - Reverse Engineering Stack Exchange](https://reverseengineering.stackexchange.com/questions/17734/patching-branch-on-assembly-code)
-
-[SUSE/libpulp: libpulp enables live patching in user space applications.](https://github.com/SUSE/libpulp)
-
-[2021-08-05-libpulp.pdf](https://www.pdxlinux.org/2021-08-05-libpulp.pdf)
-
-[livepatch - Live Patching for Linux](http://ukai.jp/Software/livepatch/)
-
-[ptraceシステムコール入門 ― プロセスの出力を覗き見してみよう！ - プログラムモグモグ](https://itchyny.hatenablog.com/entry/2017/07/31/090000)
-
-[Visual Studio CodeでRust開発環境を整える - Qiita](https://qiita.com/84zume/items/377033ab6b6aee2a68d7)
-
-[Linux上でのSharedLibraryへのHookをして既存のバイナリの挙動に割り込む - Qiita](https://qiita.com/recuraki/items/9b02508d4e547e2c0e52)
-
-[Linux Kernel Module Rootkit — Syscall Table Hijacking | by GoldenOak | InfoSec Write-ups](https://infosecwriteups.com/linux-kernel-module-rootkit-syscall-table-hijacking-8f1bc0bd099c)
-
-[Hooking Linux Kernel Functions, Part 1: Looking for the Perfect Solution | Apriorit](https://www.apriorit.com/dev-blog/544-hooking-linux-functions-1)
-
-[Hooking Linux Kernel Functions, Part 2: How to Hook Functions with Ftrace | Apriorit](https://www.apriorit.com/dev-blog/546-hooking-linux-functions-2)
-
-[seccomp – Alfonso Sánchez-Beato's blog](https://www.alfonsobeato.net/tag/seccomp/)
-
-[c - Linux Kernel: System call hooking example - Stack Overflow](https://stackoverflow.com/questions/2103315/linux-kernel-system-call-hooking-example)
-
+- [Linux上でのSharedLibraryへのHookをして既存のバイナリの挙動に割り込む - Qiita](https://qiita.com/recuraki/items/9b02508d4e547e2c0e52)
+- [Linux Kernel Module Rootkit — Syscall Table Hijacking | by GoldenOak | InfoSec Write-ups](https://infosecwriteups.com/linux-kernel-module-rootkit-syscall-table-hijacking-8f1bc0bd099c)
+- [Hooking Linux Kernel Functions, Part 1: Looking for the Perfect Solution | Apriorit](https://www.apriorit.com/dev-blog/544-hooking-linux-functions-1)
+    - [Hooking Linux Kernel Functions, Part 2: How to Hook Functions with Ftrace | Apriorit](https://www.apriorit.com/dev-blog/546-hooking-linux-functions-2)
+- [seccomp – Alfonso Sánchez-Beato's blog](https://www.alfonsobeato.net/tag/seccomp/)
+- [c - Linux Kernel: System call hooking example - Stack Overflow](https://stackoverflow.com/questions/2103315/linux-kernel-system-call-hooking-example)
+- [ptraceシステムコール入門 ― プロセスの出力を覗き見してみよう！ - プログラムモグモグ](https://itchyny.hatenablog.com/entry/2017/07/31/090000)
+- [LinuxカーネルのコアであるeBPFを実装したSysdigとFalco – Sysdig](https://sysdig.jp/blog/sysdig-and-falco-now-powered-by-ebpf/)
+- [Intercepting and Emulating Linux System Calls with Ptrace](https://nullprogram.com/blog/2018/06/23/)
+- [簡易 strace を作ってシステムコールを表示する](https://blog.ssrf.in/post/follow-system-call-with-ptrace/)
+- [linux - No output when running ltrace - Stack Overflow](https://stackoverflow.com/questions/43213505/no-output-when-running-ltrace)
+https://askubuntu.com/questions/201303/what-is-a-defunct-process-and-why-doesnt-it-get-killed
+- [Roberto Jordaney, personal blog - Hooking Shared Library](https://rjordaney.is/lectures/hooking_shared_lib/)
+- [c - Hook and Replace Export Function in the Loaded ELF ( .so shared library ) - Stack Overflow](https://stackoverflow.com/questions/29648919/hook-and-replace-export-function-in-the-loaded-elf-so-shared-library)
+- [dbhi/binhook: A survey of techniques to hook and/or replace functions in executable binaries or shared libraries](https://github.com/dbhi/binhook)

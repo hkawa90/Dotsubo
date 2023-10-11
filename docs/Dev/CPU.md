@@ -6,6 +6,7 @@
     - [AMD64 Architecture Programmer’s Manual, Volume 3: General-Purpose and System Instructions, 24594](https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/programmer-references/24594.pdf)
 - [introduction-to-x64-assembly-181178.pdf](https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rxsBghsrvpI?si=l-7e-R4a7NWp9F_n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### 参考
 - [x64のレジスタ拡張（1/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/0506/29/news002.html)
 - [x64の3つの動作モードを知る（1/2 ページ） - ITmedia エンタープライズ](https://www.itmedia.co.jp/enterprise/articles/0506/27/news008.html)
@@ -14,3 +15,7 @@
     - [Assembly Programming on x86-64 Linux (03)](https://www.mztn.org/lxasm64/amd03.html)
     - [Assembly Programming on x86-64 Linux (04)](https://www.mztn.org/lxasm64/amd04.html)
         - [Jun's Homepage](https://www.mztn.org/index.html)
+- [x86でbus errorを起こす - Qiita](https://qiita.com/kaityo256/items/fadffae00e517efbc8aa)
+https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.egr.unlv.edu/~ed/assembly64.pdf&ved=2ahUKEwjW5ICCl7CBAxXTlFYBHYcJDeg4ChAWegQIEBAB&usg=AOvVaw1MbTXudiVAokpNA6cM-7iu
+- [assembly64.pdf](http://www.egr.unlv.edu/~ed/assembly64.pdf)
+- [ida - Patching branch on assembly code - Reverse Engineering Stack Exchange](https://reverseengineering.stackexchange.com/questions/17734/patching-branch-on-assembly-code)

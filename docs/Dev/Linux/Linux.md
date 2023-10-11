@@ -36,3 +36,7 @@
 ## Kernel Source
 
 - [Linux source code - Bootlin](https://elixir.bootlin.com/linux/latest/source)
+
+## defunct
+
+`ps`の`wchan`をみると`exit`となって、完全に終了できない状態のプロセスで、異常終了状態。いわゆるゾンビプロセス。`kill`するためには親(PPID)とそれ自身を`kill`する必要がある。
