@@ -15,7 +15,15 @@ mesonでは`build_rpath`, `install_rpath`で指定する。
 
 ## DWARF
 
-デバッグ情報のフォーマット[^1]。`objdump`で確認できる[^2]。
+デバッグ情報のフォーマット[^1]。`objdump`で確認できる[^2].
 
 [^1]: [DWARF Debugging Information Format](https://dwarfstd.org/)
-[^2]: gcc v12.3.0ではDWARF Version 1([dwarf\_1\_1\_0.pdf](https://dwarfstd.org/doc/dwarf_1_1_0.pdf))だった。
+[^2]: gcc v12.3.0ではDWARF Version 1([dwarf\_1\_1\_0.pdf](https://dwarfstd.org/doc/dwarf_1_1_0.pdf))だった.
+
+## PIC(Position Independent Code)
+
+どこのアドレスに配置されても動作する機械語コードのこと.`-fPIC`を指定する.逆に`-no-pie`でPIE形式でなくなる.
+
+## PIE(Position Independent Executable)
+
+PICな実行ファイルのこと.実行時にアドレスが決まるので、セキュリティーが向上するとされて最近使われている.

@@ -25,3 +25,10 @@
     - [mapbox/rehype-prism: rehype plugin to highlight code blocks in HTML with Prism (via refractor)](https://github.com/mapbox/rehype-prism)
 
     - [benjamin-chavez/rehype-clipboard-prep-code: A utility for the Rehype ecosystem that attaches raw code strings to server-side parent container components, enabling easy copying to the clipboard. Perfect for enhancing developer documentation, tutorials, and blogs.](https://github.com/benjamin-chavez/rehype-clipboard-prep-code)
+
+## Prism
+
+コードブロックのhighlight処理。
+
+- [Prism](https://prismjs.com/#plugins)
+    - [Prism Plugins](https://prismjs.com/#plugins)

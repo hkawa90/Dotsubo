@@ -4,3 +4,15 @@
 
 ## tar
 - `-C <path>` で展開先を指定できる。
+
+## Agrep
+
+- [gvelez17/glimpse](https://github.com/gvelez17/glimpse)
+
+## Zstandard
+
+高効率な圧縮らしい. 拡張子は`zst`, `tzst`.
+
+```shell title="コマンドインストール"
+sudo apt install zstd
+```

@@ -40,3 +40,7 @@
 ## defunct
 
 `ps`の`wchan`をみると`exit`となって、完全に終了できない状態のプロセスで、異常終了状態。いわゆるゾンビプロセス。`kill`するためには親(PPID)とそれ自身を`kill`する必要がある。
+
+## deb パッケージ
+
+- [debパッケージ作成方法をステップバイステップでまとめました](https://eng-entrance.com/linux-package-deb-create)

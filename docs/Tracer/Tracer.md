@@ -252,3 +252,5 @@ https://askubuntu.com/questions/201303/what-is-a-defunct-process-and-why-doesnt-
 - [Roberto Jordaney, personal blog - Hooking Shared Library](https://rjordaney.is/lectures/hooking_shared_lib/)
 - [c - Hook and Replace Export Function in the Loaded ELF ( .so shared library ) - Stack Overflow](https://stackoverflow.com/questions/29648919/hook-and-replace-export-function-in-the-loaded-elf-so-shared-library)
 - [dbhi/binhook: A survey of techniques to hook and/or replace functions in executable binaries or shared libraries](https://github.com/dbhi/binhook)
+- [デバッガを自作してみよう](https://zenn.dev/irugo/articles/49b3f66efaddf6)
+- [ptraceを使ってみよう！ - バイナリの歩き方](https://07c00.hatenablog.com/entry/2013/08/31/142001)
