@@ -5,7 +5,13 @@ sidebar_position: 3
 
 ## Command
 
-[ptrace(2) - Linux manual page](https://man7.org/linux/man-pages/man2/ptrace.2.html)システムコールを使って関数、システムコールをトレースします。
+[ptrace(2) - Linux manual page](https://man7.org/linux/man-pages/man2/ptrace.2.html)システムコールを使って関数、システムコールをトレースします.
+
+`ptrace()`はSELinux, Redhatでは以下コマンドで無効化できる。`Permission denied`で実行が拒否される.
+
+```shell
+setsebool -P deny_ptrace on
+```
 
 ### strace
 
@@ -97,7 +103,10 @@ int main()
     return 0;
 }
 ```
-TODO: PTRACE_ATTACH sample code
+
+上記は、プロセスを`exec`したが、プロセスIDで実行中のプロセスに対しても`ptrace`を`PTRACE_ATTACH`でトレースし、最後に`PTRACE_DETACH`でトレース終了することができる.また`PTRACE_SINGLESTEP`でデバッガのステップ実行のようなトレースもできる.
+
+[^single]: [ptraceを使ってみよう！ - バイナリの歩き方](https://07c00.hatenablog.com/entry/2013/08/31/142001)
 
 ### 参考
 Linux Journal:
@@ -209,9 +218,12 @@ https://tech.tier4.jp/entry/2021/03/10/160000
 
 ## Seccomp
 
+- [kernel.org/doc/Documentation/prctl/seccomp\_filter.txt](https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt)
+
 - [Seccomp BPF (SECure COMPuting with filters) — The Linux Kernel documentation](https://www.kernel.org/doc/html/v4.19/userspace-api/seccomp_filter.html?highlight=seccomp)
 - [seccomp/libseccomp: The main libseccomp repository](https://github.com/seccomp/libseccomp)
 - [Introduction to Seccomp - Speaker Deck](https://speakerdeck.com/mrtc0/introduction-to-seccomp)
+- [seccomp – Alfonso Sánchez-Beato's blog](https://www.alfonsobeato.net/tag/seccomp/)
 
 >        SCMP_ACT_TRACE(uint16_t msg_num)
 > If the thread is being traced and the tracing process specified the PTRACE_O_TRACESECCOMP option in the call to ptrace(2), the tracing process will be notified, via PTRACE_EVENT_SECCOMP, and the value provided in msg_num can be retrieved using the PTRACE_GETEVENTMSG option.
@@ -253,4 +265,10 @@ https://askubuntu.com/questions/201303/what-is-a-defunct-process-and-why-doesnt-
 - [c - Hook and Replace Export Function in the Loaded ELF ( .so shared library ) - Stack Overflow](https://stackoverflow.com/questions/29648919/hook-and-replace-export-function-in-the-loaded-elf-so-shared-library)
 - [dbhi/binhook: A survey of techniques to hook and/or replace functions in executable binaries or shared libraries](https://github.com/dbhi/binhook)
 - [デバッガを自作してみよう](https://zenn.dev/irugo/articles/49b3f66efaddf6)
-- [ptraceを使ってみよう！ - バイナリの歩き方](https://07c00.hatenablog.com/entry/2013/08/31/142001)
+- [Intercepting and Emulating Linux System Calls with Ptrace](https://nullprogram.com/blog/2018/06/23/)
+    - [skeeto/ptrace-examples: Examples for Linux ptrace(2)](https://github.com/skeeto/ptrace-examples)
+- [Code injection in running process using ptrace | by shashank Jain | Medium](https://medium.com/@jain.sm/code-injection-in-running-process-using-ptrace-d3ea7191a4be)
+- [gaffe23/linux-inject: Tool for injecting a shared object into a Linux process](https://github.com/gaffe23/linux-inject/tree/master)
+    - [linux-inject/slides\_BHArsenal2015.pdf at master · gaffe23/linux-inject](https://github.com/gaffe23/linux-inject/blob/master/slides_BHArsenal2015.pdf)
+- [Google Code Archive - Long-term storage for Google Code Project Hosting.](https://code.google.com/archive/p/ptrace-tools/)
+

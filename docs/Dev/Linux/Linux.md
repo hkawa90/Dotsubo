@@ -44,3 +44,28 @@
 ## deb パッケージ
 
 - [debパッケージ作成方法をステップバイステップでまとめました](https://eng-entrance.com/linux-package-deb-create)
+
+## Core dump
+
+プロセスは特定のシグナルを受信すると、自身のメモリイメージをcoreファイルとして保存する.coreファイル名は`/proc/sys/kernel/core_pattern`で決めることができる.
+
+```shell title="create core dump file"
+ulimit -S -c unlimited
+sudo bash -c 'echo core.%e > /proc/sys/kernel/core_pattern'
+sleep 100
+<Ctrl - \>
+sleep 100%
+kill -6 <PID>
+```
+
+上記の他に`gcore`[^1]を使う方法もある.
+
+`Ctrl-\`でコア出力させたくなければ、
+
+```shell title="disable quit command"
+stty quit undef
+```
+
+- [core(5) - Linux manual page](https://man7.org/linux/man-pages/man5/core.5.html)
+
+[^1]: [Man page of GCORE](https://linuxjm.osdn.jp/html/GNU_gdb/man1/gcore.1.html)
