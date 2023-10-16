@@ -253,6 +253,7 @@ https://tech.tier4.jp/entry/2021/03/10/160000
 - [Linux Kernel Module Rootkit — Syscall Table Hijacking | by GoldenOak | InfoSec Write-ups](https://infosecwriteups.com/linux-kernel-module-rootkit-syscall-table-hijacking-8f1bc0bd099c)
 - [Hooking Linux Kernel Functions, Part 1: Looking for the Perfect Solution | Apriorit](https://www.apriorit.com/dev-blog/544-hooking-linux-functions-1)
     - [Hooking Linux Kernel Functions, Part 2: How to Hook Functions with Ftrace | Apriorit](https://www.apriorit.com/dev-blog/546-hooking-linux-functions-2)
+        - [Playing with ptrace (64-bit), Part I – Innovative Innocation](https://hoymkot.wordpress.com/2020/03/14/playing-with-ptrace-64-bit-part-i/)
 - [seccomp – Alfonso Sánchez-Beato's blog](https://www.alfonsobeato.net/tag/seccomp/)
 - [c - Linux Kernel: System call hooking example - Stack Overflow](https://stackoverflow.com/questions/2103315/linux-kernel-system-call-hooking-example)
 - [ptraceシステムコール入門 ― プロセスの出力を覗き見してみよう！ - プログラムモグモグ](https://itchyny.hatenablog.com/entry/2017/07/31/090000)
@@ -272,3 +273,22 @@ https://askubuntu.com/questions/201303/what-is-a-defunct-process-and-why-doesnt-
     - [linux-inject/slides\_BHArsenal2015.pdf at master · gaffe23/linux-inject](https://github.com/gaffe23/linux-inject/blob/master/slides_BHArsenal2015.pdf)
 - [Google Code Archive - Long-term storage for Google Code Project Hosting.](https://code.google.com/archive/p/ptrace-tools/)
 
+## Trap
+
+- __builtin_debugtrap for some versions of clang (identified with __has_builtin(__builtin_debugtrap))
+    On MSVC and Intel C/C++ Compiler: __debugbreak
+- For ARM C/C++ Compiler: __breakpoint(42)
+- For x86/x86_64, assembly: int3
+- For ARM Thumb, assembly: .inst 0xde01
+- For ARM AArch64, assembly: .inst 0xd4200000
+- For other ARM, assembly: .inst 0xe7f001f0
+- For Alpha, assembly: bpt
+- For non-hosted C with GCC (or something which masquerades as it), __builtin_trap
+- Otherwise, include signal.h and
+    - If defined(SIGTRAP) (i.e., POSIX), raise(SIGTRAP)
+    - Otherwise, raise(SIGABRT)
+- raise(SIGTRAP);
+
+> [c++ - Is there a portable equivalent to DebugBreak()/\_\_debugbreak? - Stack Overflow](https://stackoverflow.com/questions/173618/is-there-a-portable-equivalent-to-debugbreak-debugbreak)
+
+- [kmcallister/embedded-breakpoints: Embed GDB breakpoints in C source code](https://github.com/kmcallister/embedded-breakpoints)

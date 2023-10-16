@@ -82,3 +82,20 @@ long sz = sysconf(_SC_PAGESIZE);
 5. shm_unlink()で共有メモリーオブジェクト削除
 
 TODO:サンプルプログラム
+
+### Anonymous shared memory
+
+<Gist id="eb838c0a577cf8b5fbfef541257f3336" 
+/>
+
+### Named shared memory
+
+TODO:サンプルプログラム
+
+## 参考
+
+- [メモリ管理](https://www.coins.tsukuba.ac.jp/~yas/coins/os2-2019/2020-01-16/index.html)
+- [共有メモリとファイルシステム――その1：知ってトクするシステムコール（6）（1/2 ページ） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1207/06/news131.html)
+- [共有メモリとファイルシステム――その2：知ってトクするシステムコール（7）（1/2 ページ） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/1208/07/news127.html)
+- [POSIX shared-memory API - GeeksforGeeks](https://www.geeksforgeeks.org/posix-shared-memory-api/)
+- [7-41 pthread mutexをプロセス間で利用する:Geekなぺーじ](https://www.geekpage.jp/programming/linux-network/book/07/7-41.php)

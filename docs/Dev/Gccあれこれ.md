@@ -27,3 +27,7 @@ mesonでは`build_rpath`, `install_rpath`で指定する。
 ## PIE(Position Independent Executable)
 
 PICな実行ファイルのこと.実行時にアドレスが決まるので、セキュリティーが向上するとされて最近使われている.
+
+## Tips
+
+- [[gcc] ブレイクできないところにブレイクポイントを作る | Tech控え帳](https://www.chihayafuru.jp/tech/index.php/archives/2775)
