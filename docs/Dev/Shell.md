@@ -70,4 +70,5 @@ echo "Done"
     - Pure bash YAML parser
 ## 参考
 
-[linux - Pipe to/from the clipboard in a Bash script - Stack Overflow](https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-a-bash-script)
+- [linux - Pipe to/from the clipboard in a Bash script - Stack Overflow](https://stackoverflow.com/questions/749544/pipe-to-from-the-clipboard-in-a-bash-script)
+- [【シェルスクリプト】オプションパーサーの紹介 #Bash - Qiita](https://qiita.com/ktamido/items/cdebdd6413fe0638a23b)

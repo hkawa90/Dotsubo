@@ -83,6 +83,10 @@ long sz = sysconf(_SC_PAGESIZE);
 
 TODO:サンプルプログラム
 
+#### mmap
+
+- [How to use mmap function in C language?](https://linuxhint.com/using_mmap_function_linux/)
+
 ### Anonymous shared memory
 
 <Gist id="eb838c0a577cf8b5fbfef541257f3336" 

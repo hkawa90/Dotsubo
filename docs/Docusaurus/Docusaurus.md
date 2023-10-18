@@ -274,3 +274,5 @@ memo:
 
 - [DocSearch: Search made for documentation | DocSearch by Algolia](https://docsearch.algolia.com/)
   - [イケてる全文検索サービス「Algolia」を触ってみよう - Qiita](https://qiita.com/yoohya/items/eefbb3a0dc60cd11ab9a)
+- [Enable Docusaurus2 Lunr offline/local search | Medium](https://divya-bhushan.medium.com/how-i-enabled-lunr-search-in-docusaurus-v2-0-0-alpha-69-a19e62adba98)
+  - ローカル検索(indexファイルを作って検索する)

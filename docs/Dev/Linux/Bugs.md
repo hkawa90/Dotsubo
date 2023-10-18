@@ -38,6 +38,36 @@
 > 
 > デッドロックが発生すると、片方のトランザクションがロールバックで強制終了されます。
 
+```cpp title="Deadlock sample"
+// 
+std::mutex m1;
+std::mutex m2;
+
+auto f1 = [&m1, &m2]() {
+    std::lock_guard<std::mutex> lg1(m1);
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    std::lock_guard<std::mutex> lg2(m2);
+};
+
+auto f2 = [&m1, &m2]() {
+    std::lock_guard<std::mutex> lg1(m2);
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    std::lock_guard<std::mutex> lg2(m1);
+};
+
+std::thread thread1([&f1, &f2]() {
+    f1();
+});
+
+std::thread thread2([&f1, &f2]() {
+    f2();
+});
+
+thread1.join();
+thread2.join();
+```
+> - [C++ Deadlock example - Stack Overflow](https://stackoverflow.com/questions/49351314/c-deadlock-example)
+
 ### 参考
 
 - [デッドロック - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%83%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF)

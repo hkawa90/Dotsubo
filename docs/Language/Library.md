@@ -16,6 +16,13 @@
 
 ## Javascirpt
 
+### JavaScriptフレームワーク
+
+#### Svelte
+
+- [JavaScriptフレームワーク「Svelte」を試してみた | GrapeCity.devlog - グレープシティ株式会社](https://devlog.grapecity.co.jp/svelte-quickstart/)
+- [AstroでSvelte使ってみた - Svelte不定期連載-04 | KINTO Tech Blog | キントテックブログ](https://blog.kinto-technologies.com/posts/Svelte-magazine-004-Astro%E3%81%A7Svelte%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/)
+
 ### mermaid
 
 - [javascript - How to add a link in a mermaid node description? - Stack Overflow](https://stackoverflow.com/questions/41960529/how-to-add-a-link-in-a-mermaid-node-description)

@@ -272,6 +272,10 @@ https://askubuntu.com/questions/201303/what-is-a-defunct-process-and-why-doesnt-
 - [gaffe23/linux-inject: Tool for injecting a shared object into a Linux process](https://github.com/gaffe23/linux-inject/tree/master)
     - [linux-inject/slides\_BHArsenal2015.pdf at master · gaffe23/linux-inject](https://github.com/gaffe23/linux-inject/blob/master/slides_BHArsenal2015.pdf)
 - [Google Code Archive - Long-term storage for Google Code Project Hosting.](https://code.google.com/archive/p/ptrace-tools/)
+- [共有ライブラリのリロケーションに使われるセクションとreturn\_to\_dl\_resolve攻撃｜小物三下](https://note.com/pien2021/n/n0045177b9844)
+- [JeffJerseyCow | What are the GOT and PLT? — Part 1](https://jeffjerseycow.github.io/2017/12/what-are-the-got-and-plt-pt1)
+- [Position-Independent Code with GCC for ARM Cortex-M | MCU on Eclipse](https://mcuoneclipse.com/2021/06/05/position-independent-code-with-gcc-for-arm-cortex-m/)
+- [A CFI Countermeasure Against GOT Overwrite Attacks](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9003251)
 
 ## Trap
 

@@ -43,6 +43,8 @@ Exercise:
 
 Next generation Electron build tooling based on Vite.
 
+- [Getting Started | electron-vite](https://electron-vite.org/guide/)
+- [Build an Electron app with electron-vite - LogRocket Blog](https://blog.logrocket.com/build-electron-app-electron-vite/)
 - [electron-vite で Electron アプリ開発の生産性を上げる | 豆蔵デベロッパーサイト](https://developer.mamezou-tech.com/blogs/2023/05/22/electron-vite/)
 
 [^3]:[alex8088/electron-vite: Next generation Electron build tooling based on Vite 新一代 Electron 开发构建工具，支持源代码保护](https://github.com/alex8088/electron-vite)
