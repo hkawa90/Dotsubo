@@ -25,3 +25,4 @@ Mermaidのmindmap形式でMindmap図が作成できる。
 ### 参考
 
 - [draw.ioの使い方を解説〜無料の高機能作図ツールを使って資料の質をあげよう！｜ferret](https://ferret-plus.com/8408)
+- [【動画付き】 draw.io 使い方まとめ 〜エンジニアでなくても使えるTips集〜 #JavaScript - Qiita](https://qiita.com/G-awa/items/8fd414700b68b2bcafcc)

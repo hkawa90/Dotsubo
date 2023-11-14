@@ -4,6 +4,22 @@ description: C/CPP開発環境
 tags: [Docker, Dev]
 ---
 
+# 通常ユーザで実行
+
+```dockerfile
+ARG user
+ARG userid
+
+# $user, $useridが有効か調べる.設定しないとbuildで失敗
+RUN test -n "$user"
+RUN test -n "$userid"
+
+# add same user
+RUN groupadd -r $user && useradd -r -m -u $userid -g $user $user
+# パスワードなしでsudoできるようにする
+RUN echo "$user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+```
+
 # C/CPP開発環境
 
 ```

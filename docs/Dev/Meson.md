@@ -15,6 +15,7 @@ Makeの代替.メタビルドシステムとも呼ばれるらしい。バック
     - [Ccache — Compiler cache](https://ccache.dev/)[^1]
 
 [^1]:[ccache でビルド高速化。と設定のポイント - Qiita](https://qiita.com/naohikowatanabe/items/a6cb8745737481b103e3)
+
 ## Install
 
 pipかaptでインストールできる。
@@ -27,13 +28,25 @@ sudo apt-get -y install meson
 
 `meson.build`ファイルに必要な記述を行い、mesonコマンドで実行していく。
 
-### meson.build テンプレート作成
+### meson.build テンプレートからの作成
 
 ```shell title="テンプレート作成"
+mkdir my-project
+cd my-project
 meson init --type executable
+Using "my-project" (name of current directory) as project name.
+Using "my-project" (project name) as name of executable to build.
+Defaulting to generating a C language project.
+Sample project created. To build it run the
+following commands:
+
+meson setup builddir
+meson compile -C builddir
+ls
+meson.build  my_project.c
 ```
 
-```
+```shell title="initコマンド"
 usage: meson init [-h] [-C WD] [-n NAME] [-e EXECUTABLE] [-d DEPS]
                   [-l {c,cpp,cs,cuda,d,fortran,java,objc,objcpp,rust,vala}] [-b]
                   [--builddir BUILDDIR] [-f] [--type {executable,library}] [--version VERSION]
@@ -59,11 +72,70 @@ optional arguments:
   --version VERSION                               project version. default: 0.1
 ```
 
-meson.buildとテンプレートソースプログラムの作成を行う。その後は下記コマンドでbuilddirディレクトリにビルド用ファイル作成とビルドをninjaで実行する。
+meson.buildとテンプレートソースプログラムの作成を行う。作成される`meson.build`は以下の通り.
+
+```meson title="initコマンドで生成されたmeson.build"
+project('my-project', 'c',
+  version : '0.1',
+  default_options : ['warning_level=3'])
+
+exe = executable('my_project', 'my_project.c',
+  install : true)
+
+test('basic', exe)
+```
+
+その後は下記コマンドでbuilddirディレクトリにビルド用ファイル作成とビルドをninjaで実行する。
+
+```shell
+meson setup builddir
+meson compile -C builddir
+```
+
+なお、`type`に`library`を選択した場合の`meson.build`は以下の通り.
+
+```meson
+project('my-lib', 'c',
+  version : '0.1',
+  default_options : ['warning_level=3'])
+
+# These arguments are only used to build the shared library
+# not the executables that use the library.
+lib_args = ['-DBUILDING_MY_LIB']
+
+shlib = shared_library('my_lib', 'my_lib.c',
+  install : true,
+  c_args : lib_args,
+  gnu_symbol_visibility : 'hidden',
+)
+
+test_exe = executable('my_lib_test', 'my_lib_test.c',
+  link_with : shlib)
+test('my_lib', test_exe)
+
+# Make this library usable as a Meson subproject.
+my_lib_dep = declare_dependency(
+  include_directories: include_directories('.'),
+  link_with : shlib)
+
+# Make this library usable from the system's
+# package manager.
+install_headers('my_lib.h', subdir : 'my_lib')
+
+pkg_mod = import('pkgconfig')
+pkg_mod.generate(
+  name : 'my-lib',
+  filebase : 'my_lib',
+  description : 'Meson sample project.',
+  subdirs : 'my_lib',
+  libraries : shlib,
+  version : '0.1',
+)
+```
 
 ### meson.buildの書き方
 
-#### Project
+#### Project(必須)
 
 project[^project]は各プロジェクトで最初に呼び出される関数で、Meson を初期化する。この関数の最初の引数は、このプロジェクトの名前を定義する文字列でなければなりません。
 
@@ -91,12 +163,112 @@ project[^project]は各プロジェクトで最初に呼び出される関数で
 
 [^executable] : [Reference-manual - executable](https://mesonbuild.com/Reference-manual_functions.html#executable)
 
+#### library
+
+共有(shared)、静的(static)なライブラリ[^library]を生成する.
+
+[^library]: [library()](https://mesonbuild.com/Reference-manual_functions.html#library)
+
+#### shared_library
+
+```meson title="共有ライブラリを作成する"
+tracer_lib = shared_library(
+  'tracer',                         # targetの名称: lib`name`.soというファイル名になる
+  tracer_srcs,                      # srcファイル指定
+  include_directories: includes,    # include path設定
+  c_args: c_compile_options,        # コンパイルオプション
+  link_args: c_link_options,        # linker オプション
+  dependencies: external_lib_deps,  # 依存関係
+  install: false,                   # インストール対象とするか
+)
+```
+
+- [shared_library function](https://mesonbuild.com/Reference-manual_functions.html#shared_library)
+
+#### static_library
+
+```meson title="静的ライブラリを作成する"
+tracer_static_lib = static_library(
+  'tracer',                         # targetの名称: lib`name`.aというファイル名になる
+  tracer_srcs,
+  include_directories: includes,
+  c_args: c_compile_options,
+  link_args: c_link_options,
+  dependencies: external_lib_deps,
+  install: false,
+)
+```
+
+- [static_library function](https://mesonbuild.com/Reference-manual_functions.html#static_library)
+
+#### both_libraries
+
+共有(shared)、静的(static)なライブラリを生成する.
+
+- [both_libraries](https://mesonbuild.com/Reference-manual_functions.html#both_libraries)
+
+### ライブラリ依存関係構築
+
+必要な外部ライブラリなどの依存関係を記述できる.ライブラリが存在しない場合ビルドは失敗する.`pkg-config`が使えるライブラリであれば,`dependency`[^dependency]を使うことができる.
+
+```meson title="ハイライト部分が依存関係構築部分"
+# highlight-start
+cc = meson.get_compiler('c')
+lib_pthread = cc.find_library('pthread', required: true)
+# highlight-end
+shared_library(
+  'tracer',
+  tracer_srcs,
+  include_directories: includes,
+  c_args: c_compile_options,
+  link_args: c_link_options,
+  # highlight-next-line
+  dependencies: [lib_pthread],
+  install: false,
+)
+```
+[^dependency] : [Dependencies](https://mesonbuild.com/Dependencies.html#dependency-detection-method)
+
+### 複数階層
+
+いくつかのサブディレクトリなどで管理されたプロジェクトでは`meson.build`を複数作成しておいて、プロジェクトのrootディレクトリの`meson.build`から`subdir()`[^subdir]指定したディレクトをカレントディレクトリとして`meson.build`を実行することができる.
+
+[^subdir]: [subdir function](https://mesonbuild.com/Reference-manual_functions.html#subdir)
+
+### Custom-target
+TODO: 工事中
+
+```meson
+ex_configure_lib = custom_target( 'crt-config', # unique ID
+  input : [],
+  output: ['configure'],
+  command: ['./crt_configure.sh']
+)
+
+ex_make_lib =  custom_target( 'crt-config', # unique ID
+  input : [],
+  output: ['configure'],
+  command: ['./configure']
+)
+```
+
+```sh title="create configure file"
+aclocal
+autoheader
+automake --add-missing --copy
+autoconf
+```
+
+### 参考
+
+- [configureの作り方(autotoolsの使い方） - のぴぴのメモ](https://nopipi.hatenablog.com/entry/2013/01/14/025509)
+
 ## 実行例
 
 ```shell title="セットアップからビルドまで"
 meson setup builddir
 cd builddir
-meson compile
+meson compile # meson compile -C builddirではcdしなくていい.
 ```
 
 ```shell title="コンパイラの設定変更"
